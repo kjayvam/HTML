@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>  //  안됨
+        function addNumber(){
+            var sum = 10 + 20;  //  지역변수 선언
+        }
+        addNumber();
+        console.log(sum);
+    </script>
+    <script>  //  
+        function addNumber(){
+            var sum = 10 + 20;  //  지역변수 선언
+            mulit = 10 * 20;  //  전역변수 선언
+        }
+        addNumber();
+        console.log(mulit);
+    </script>
+    <script>
+        var x = 10;
+
+        function displayNumber(){
+            console.log("x is " + x);
+            console.log("y is " + y);
+            var y = 20;  //  호이스팅
+        }
+        displayNumber();
+    </script>
+    <script>
+        function addNumber(num1, num2){
+            return num1 + num2;
+        }
+        var sum = addNumber(10,20);  //  함수 인자 넣기
+        console.log(sum);  //  함수 값 받아오기
+        sum = 50;          //  변수 재할당
+        console.log(sum);  
+        var sum = 100;     //  변수 재선언
+        console.log(sum);
+    </script>
+</body>
+</html>
