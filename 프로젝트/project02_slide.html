@@ -1,0 +1,58 @@
+<head>
+    <link rel="stylesheet" href="css/show.css">
+</head>
+
+<body>
+    <!-- 슬라이드 -->
+    <div class="slidebox">
+        <!-- 이름이 같은 라디오 끼리 1개만 체크됨 -->
+        <input type="radio" name="show" id="show01" checked>
+        <input type="radio" name="show" id="show02">
+        <input type="radio" name="show" id="show03">
+        <input type="radio" name="show" id="show04">
+        <ul class="slidelist">
+            <li class="slideitem">
+                <div>
+                    <label for="show04" class="left"></label>
+                    <label for="show02" class="right"></label>
+                    <a><img src="images/show01.png"></a>
+                </div>
+            </li>
+            <li class="slideitem">
+                <div>
+                    <label for="show01" class="left"></label>
+                    <label for="show03" class="right"></label>
+                    <a><img src="images/show02.png"></a>
+                </div>
+            </li>
+            <li class="slideitem">
+                <div>
+                    <label for="show02" class="left"></label>
+                    <label for="show04" class="right"></label>
+                    <a><img src="images/show03.png"></a>
+                </div>
+            </li>
+            <li class="slideitem">
+                <div>
+                    <label for="show03" class="left"></label>
+                    <label for="show01" class="right"></label>
+                    <a><img src="images/show04.png"></a>
+                </div>
+            </li>
+        </ul>
+        <ul class="paginglist">
+            <li>
+                <label for="show01"></label>
+            </li>
+            <li>
+                <label for="show02"></label>
+            </li>
+            <li>
+                <label for="show03"></label>
+            </li>
+            <li>
+                <label for="show04"></label>
+            </li>
+        </ul>
+    </div>
+</body>

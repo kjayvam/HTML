@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<title>연습문제 1</title>
+	<style>
+		ul {
+			list-style: none;
+		}
+
+		li {
+			font-size: 20px;
+			line-height: 35px;
+		}
+
+		.check {
+			color: #ccc;
+			font-size: 20px;
+			margin-right: 25px;
+		}
+
+		.check:hover {
+			color: #222;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>할 일 목록</h1>
+	<ul>
+		<li><span class="check">&check;</span>할 일 1 </li>
+		<li><span class="check">&check;</span>할 일 2 </li>
+		<li><span class="check">&check;</span>할 일 3 </li>
+		<li><span class="check">&check;</span>할 일 4 </li>
+		<li><span class="check">&check;</span>할 일 5 </li>
+	</ul>
+	<script>
+		// 요소 추가하는 함수
+		function newRegister() {
+			var newItem = document.createElement("span");  // 요소 노드 추가
+			var subject = document.querySelector("#subject");  // 폼의 텍스트 필드
+			var newText = document.createTextNode(subject.value);  // 텍스트 필드의 값을 텍스트 노드로 만들기
+			newItem.appendChild(newText);  // 텍스트 노드를 요소 노드의 자식 노드로 추가
+
+			var itemList = document.querySelector("#itemList");  // 웹 문서에서 부모 노드 가져오기 
+			itemList.insertBefore(newItem, itemList.childNodes[0]);  // 자식 노드중 첫번째 노드 앞에 추가
+
+			subject.value = "";
+
+
+			items[i].addEventListener("click", function () {  //  항목을 클릭하면 실행할 함수\
+			}
+		}
+	</script>
+</body>
+
+</html>

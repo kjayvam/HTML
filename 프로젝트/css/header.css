@@ -1,0 +1,73 @@
+/* 리셋 */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul,li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* 홈버튼 크기 설정 */
+#logo {
+  width: 50px;
+  float: left;
+  padding: 5px;
+}
+
+/* 메인메뉴 설정 */
+.menu-main {
+  font-size: 0;  /* 글자 크기 */
+  float: left;
+  padding: 0 100px;
+}
+
+/* 서브메뉴 숨김 */
+.menu-sub {
+  display: none;
+  z-index: 10;  /* 화면에 배치 우선순위 */
+  position: relative;  /* 메뉴바가 이미지위에 올라오게 함 */
+}
+
+/* 메인메뉴의 li태그 */
+.menu-main>li {
+  display: inline-block;  /* 메뉴 가로 정렬 */
+  vertical-align: top;  /* 메뉴 기본정렬 top고정 */
+  width: 100px;  /* 메뉴 가로길이 */
+  background-color: #aaa;  /* 배경색 */
+  font-size: 16px;  /* 글자 크기 간격 */
+  text-align: center;  /* 글자 가운데 정렬 */
+}
+
+/* 메인메뉴의 a태그 */
+.menu-main>li>a {
+  display: block;  /* a태그 범위 넓힘 */
+  padding: 20px 0;  /* a태그 상하 여백 */
+}
+
+/* 메인메뉴에 마우스를 올려둘 때 a태그 반응 */
+.menu-main>li:hover>a {
+  background-color: black;  /* 배경색 */
+  color: white;  /* 글자색 */
+}
+
+/* 메인메뉴에 마우스를 올려둘 때 숨긴 서브메뉴 보이게 함 */
+.menu-main>li:hover>.menu-sub {
+  display: block;  /* a태그 범위 넓힘 */
+  background-color: #888;
+}
+
+/* 서브메뉴에 a태그 */
+.menu-sub a {
+  padding: 10px 0;  /* a태그 상하 여백 */
+}
+
+/* 서브메뉴에 마우스를 올려둘 때 a태그 반응 */
+.menu-sub a:hover {
+  text-decoration: underline;  /* 밑줄 */
+}
