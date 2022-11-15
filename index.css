@@ -1,24 +1,25 @@
-* {
+* , p {
     margin: 0;
     border: 0;
     padding: 0;
     display: block;
     z-index: 0;
     font: inherit;
-    /* 부모요소 상속 */
-    /* vertical-align: baseline; */
+    /* 글자 부모요소 상속 */
+    vertical-align: baseline;
+    /* 글자 아래 라인에 맞춤 */
     font-size: 100%; 
     /* 16px */
     line-height: 1;
     /* 세로 높이의 위쪽 기준 */
     text-align: left;
     /* 가로 너비의 왼쪽 기준 */
-
     list-style: none;
+    /* 목록을 없애기 */
     quotes: none;
-    content: '';
-    content: none;
+    /* 인용문 없애기 */
     border-collapse: collapse;
+    /* 표의 테두리와 셀의 사이 간격을 없앰 */
     border-spacing: 0;
-
+    /* 표의 테두리와 셀 사이 간격을 0으로 */
 }
