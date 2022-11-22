@@ -50,7 +50,7 @@
 label.left {
     left: 20px; /* 왼쪽에서 20px 띄우기 */
     background-color: #5F5F5F;
-    background-image: url('/프로젝트/images/left.png');
+    background-image: url("/mainPage/images/left.png");
     background-position: center center;
     background-size: 50%;
     background-repeat: no-repeat;
@@ -59,7 +59,7 @@ label.left {
 label.right {
     right: 20px;
     background-color: #5F5F5F;
-    background-image: url('/프로젝트/images/right.png');
+    background-image: url("/mainPage/images/right.png");
     background-position: center center;
     background-size: 50%;
     background-repeat: no-repeat;

@@ -1,0 +1,64 @@
+/****************/
+/* 사이드 - 정적 */
+/****************/
+
+/* 사이드 공간 만들기 */
+#side {
+    background-color: yellow;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 60px;
+    position: fixed;
+    z-index: 20;
+}
+
+/* 사이드 이미지 */
+#side img {
+    background-color: blueviolet;
+    height: 60px;
+    width: 60px;
+    margin-bottom: 5px;
+}
+
+/******************/
+/* 사이드바 - 동적(페이지, 버튼) */
+/******************/
+
+/* 사이드바 공간 만들기 */
+#sidebar {
+    position: fixed;
+    background-color: white;
+    top: 0;
+    left: 60px;
+    height: 100%;
+    width: 300px;
+    box-shadow: 1px 0 10px 1px;
+    z-index: 19;
+}
+
+/* 버튼 */
+#sidebutton button {
+    position: fixed;
+    top: 50%;
+    left: 360px;
+    height: 70px;
+    font-size: 40px;
+    background-color: rgba(255, 0, 0, 0.1);
+    border-style: solid;
+    border-width: 1px;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    cursor: pointer;
+    z-index: 20;
+}
+
+/* 버튼 안보이게 */
+#button-right {
+    display: none;
+}
+
+여기부터 만들어야함
+div[id="button-left"]:checked + div {
+    left: -160px;
+}
