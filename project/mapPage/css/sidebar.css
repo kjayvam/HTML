@@ -137,7 +137,7 @@ aside {
      */
 }
 
-/* 버튼 스타일 */
+/* 버튼 공간 만들기 */
 aside label {
     height: 50px;
     width: 20px;
@@ -147,14 +147,19 @@ aside label {
     z-index: 5;
     top: 50%;
     transform: translateY(-50%);
-    font-size: 30px;
+    overflow: hidden;
+}
+
+/* 버튼 스타일 */
+aside button {
+    height: 50px;
+    width: 20px;
     cursor: pointer;
-    padding-left: 8;
 }
 
 /* 우측 버튼 안보이게 */
-button {
-    /* display: none; */
+#rbtn+label {
+    display: none;
 }
 
 /* #button-left:checked {
