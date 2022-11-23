@@ -1,0 +1,101 @@
+/****************************/
+/* 사이드(정적) - 홈, 내비 */
+/****************************/
+
+/* 사이드 공간 만들기 */
+header {
+    background-color: yellow;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 60px;
+    position: fixed;
+    z-index: 20;
+    overflow: hidden;
+}
+
+/* 홈 이미지 */
+header img {
+    background-color: blueviolet;
+    height: 60px;
+    width: 60px;
+}
+
+
+/*********************************/
+/* 사이드바(동적) - 사이드바, 버튼 */
+/*********************************/
+
+/* 텝 공간 만들기 */
+nav {
+    z-index: 20;
+    position: fixed;
+    background-color: burlywood;
+    top: 70;
+    left: 0;
+    height: 80%;
+    width: 60px;
+    overflow: hidden;
+}
+
+/* 내비 체크박스 숨기기 */
+input[type="radio"] {
+    display: none;
+}
+
+/* 내비 텝 이미지 */
+nav img {
+    position: fixed;
+    top: 70;
+    display: block;
+
+    background-color: white;
+    height: 60px;
+    width: 60px;
+    margin-bottom: 0px;
+    padding: 20px 0px;
+    border-style: solid;
+    border-width: 1px;
+    cursor: pointer;
+
+}
+
+/* 내비 탭 클릭시 이미지 변화 */
+input[type="radio"]:checked+label img {
+    background-color: tomato;
+    z-index: 30;
+}
+
+/* 사이드바 공간 만들기 */
+.conbox {
+    background-color: greenyellow;
+    top: 0;
+    left: 60px;
+    height: 100%;
+    width: 300px;
+    box-shadow: 0.1px 0 7px 0px;
+    position: fixed;
+    z-index: 19;
+    display: none;
+}
+
+/* 텝 클릭시 내용 출현 */
+input[id="num1"]:checked~aside>.con1 {
+    display: block;
+}
+
+input[id="num2"]:checked~aside>.con2 {
+    display: block;
+}
+
+input[id="num3"]:checked~aside>.con3 {
+    display: block;
+}
+
+input[id="num4"]:checked~aside>.con4 {
+    display: block;
+}
+
+input[id="num5"]:checked~aside>.con5 {
+    display: block;
+}

@@ -1,7 +1,44 @@
-
 <head>
-<link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/sidebar.css">
 </head>
-<body>
-네이버처럼 왼쪽에 텝을 두고 사이드바에 컨텐츠가 나오는 방식으로 사용하기 
+<!-- 리셋 -->
+
+<body style="margin:0; padding:0; border: 0;">
+    <!-- 지도가 있다고 가정 -->
+    <main style="background-color:rgb(190, 190, 243); width:100%; height:100%; cursor: pointer;">
+    </main>
+    <!-- 사이드(정적) -->
+    <header>
+        <a href="#"><img src="images/home.png" alt="메인페이지가기"></a>
+    </header>
+    <!-- 사이드바(동적) -->
+    <nav>
+        <input type="radio" name="sideTab" id="num1" checked>
+        <label for="num1"><img src="images/home.png" alt=""></label>
+        <input type="radio" name="sideTab" id="num2">
+        <label for="num2"><img src="images/home.png" alt=""></label>
+        <input type="radio" name="sideTab" id="num3">
+        <label for="num3"><img src="images/home.png" alt=""></label>
+        <input type="radio" name="sideTab" id="num4">
+        <label for="num4"><img src="images/home.png" alt=""></label>
+        <input type="radio" name="sideTab" id="num5">
+        <label for="num5"><img src="images/home.png" alt=""></label>
+        <aside>
+            <section class="conbox con1">
+                컨텐츠 탭 내용 01
+            </section>
+            <section class="conbox con2">
+                컨텐츠 탭 내용 02
+            </section>
+            <section class="conbox con3">
+                컨텐츠 탭 내용 03
+            </section>
+            <section class="conbox con4">
+                컨텐츠 탭 내용 04
+            </section>
+            <section class="conbox con5">
+                컨텐츠 탭 내용 05
+            </section>
+        </aside>
+    </nav>
 </body>
