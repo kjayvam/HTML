@@ -1,17 +1,19 @@
-/****************************/
-/* 사이드(정적) - 홈, 내비 */
-/****************************/
+/********************/
+/* 사이드(정적) - 홈 */
+/********************/
 
-/* 사이드 공간 만들기 */
+/* 사이드 헤더 공간 만들기 */
 header {
-    background-color: yellow;
     top: 0;
     left: 0;
+    position: fixed;
+    z-index: 10;
+    /* 
+    background-color: yellow;
     height: 100%;
     width: 60px;
-    position: fixed;
-    z-index: 20;
     overflow: hidden;
+     */
 }
 
 /* 홈 이미지 */
@@ -21,21 +23,33 @@ header img {
     width: 60px;
 }
 
-
 /*********************************/
 /* 사이드바(동적) - 사이드바, 버튼 */
 /*********************************/
 
 /* 텝 공간 만들기 */
 nav {
-    z-index: 20;
+    z-index: 1;
     position: fixed;
-    background-color: burlywood;
-    top: 70;
+    top: 70px;
     left: 0;
     height: 80%;
     width: 60px;
     overflow: hidden;
+    /* 
+    background-color: red;
+     */
+}
+
+/* 가상 공간 만들기 */
+nav div {
+    z-index: 5;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 60px;
+    background-color: burlywood;
 }
 
 /* 내비 체크박스 숨기기 */
@@ -45,38 +59,34 @@ input[type="radio"] {
 
 /* 내비 텝 이미지 */
 nav img {
-    position: fixed;
-    top: 70;
-    display: block;
-
+    z-index: 6;
+    position: relative;
+    top: 0;
     background-color: white;
     height: 60px;
     width: 60px;
-    margin-bottom: 0px;
     padding: 20px 0px;
     border-style: solid;
-    border-width: 1px;
+    border-width: 1px 0;
     cursor: pointer;
-
-}
-
-/* 내비 탭 클릭시 이미지 변화 */
-input[type="radio"]:checked+label img {
-    background-color: tomato;
-    z-index: 30;
 }
 
 /* 사이드바 공간 만들기 */
 .conbox {
     background-color: greenyellow;
+    z-index: 4;
+    position: fixed;
     top: 0;
     left: 60px;
     height: 100%;
-    width: 300px;
+    width: 350px;
     box-shadow: 0.1px 0 7px 0px;
-    position: fixed;
-    z-index: 19;
     display: none;
+}
+
+/* 내비 탭 클릭시 이미지 변화 */
+input[type="radio"]:checked+label img {
+    background-color: tomato;
 }
 
 /* 텝 클릭시 내용 출현 */
@@ -99,3 +109,73 @@ input[id="num4"]:checked~aside>.con4 {
 input[id="num5"]:checked~aside>.con5 {
     display: block;
 }
+
+/* 버튼 공간 만들기 */
+#sidebutton {
+    position: fixed;
+    z-index: 6;
+    left: 410px;
+    background: none;
+    height: 50px;
+    width: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    overflow: hidden;
+
+    /* background-color: red; */
+}
+
+/* 버튼 스타일 */
+button {
+    height: 50px;
+    width: 20px;
+    font-size: 20px;
+    border-color: black;
+    border-width: 1px;
+    background-color: white;
+    cursor: pointer;
+    position: absolute;
+}
+
+/* 우측 버튼 안보이게 */
+#button-right {
+    display: none;
+}
+
+#button-left:checked {
+    background-color: black;
+    color: white;
+    outline: none;
+}
+
+
+
+/* 버튼을 클릭하면 효과*/
+/* aside #button-left:checked~#sidebar-content {
+    left: 100px;
+    transform: translateX(50%)
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+z-index로 보는 위치 정보
+홈버튼 10
+사이드 1
+
+텝이미지 6
+가상공간 5
+사이드바 4
+버튼 6
+*/

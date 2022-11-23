@@ -5,7 +5,7 @@
 
 <body style="margin:0; padding:0; border: 0;">
     <!-- 지도가 있다고 가정 -->
-    <main style="background-color:rgb(190, 190, 243); width:100%; height:100%; cursor: pointer;">
+    <main style="background-color:rgb(190, 190, 243); width:100%; height:100%; /* cursor: pointer; */">
     </main>
     <!-- 사이드(정적) -->
     <header>
@@ -13,6 +13,10 @@
     </header>
     <!-- 사이드바(동적) -->
     <nav>
+        <!-- 가상공간 -->
+        <div>
+        </div>
+        <!-- 텝 메뉴 -->
         <input type="radio" name="sideTab" id="num1" checked>
         <label for="num1"><img src="images/home.png" alt=""></label>
         <input type="radio" name="sideTab" id="num2">
@@ -23,6 +27,7 @@
         <label for="num4"><img src="images/home.png" alt=""></label>
         <input type="radio" name="sideTab" id="num5">
         <label for="num5"><img src="images/home.png" alt=""></label>
+        <!-- 사이드바 -->
         <aside>
             <section class="conbox con1">
                 컨텐츠 탭 내용 01
@@ -39,6 +44,11 @@
             <section class="conbox con5">
                 컨텐츠 탭 내용 05
             </section>
+            <!-- 버튼 -->
+            <div id="sidebutton">
+                <button id="button-left">&lang;</button>
+                <button id="button-right">&rang;</button>
+            </div>
         </aside>
     </nav>
 </body>
