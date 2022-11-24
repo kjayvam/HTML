@@ -1,0 +1,33 @@
+/* 체크박스 숨기기 */
+input[id="button"] {
+    display: none;
+}
+
+/* 버튼 스타일 */
+input[id="button"]~label {
+    display: block;
+    width: 20px;
+    height: 50px;
+    cursor: pointer;
+    overflow: hidden;
+    /* 글자 관련 */
+    text-align: center;
+    font-size: 30px;
+    /*  */
+    position: relative;
+}
+
+/* 오른쪽버튼 숨기기 */
+input[id="button"]~label[id="rbtn"]>div {
+    display: none;
+}
+
+/* 왼쪽버튼 누르면 숨기기 */
+input[id="button"]:checked~label[id="lbtn"]>div {
+    display: none;
+}
+
+/* 오른쪽버튼 누르면 숨기기 */
+input[id="button"]:checked~label[id="rbtn"]>div {
+    display: block;
+}

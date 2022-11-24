@@ -1,3 +1,15 @@
+/* 
+z-index로 보는 위치 정보
+홈버튼 10
+사이드 1
+
+탭이미지 6
+가상공간 5
+사이드바 4
+버튼 5
+*/
+
+
 /********************/
 /* 사이드(정적) - 홈 */
 /********************/
@@ -23,25 +35,15 @@ header img {
     width: 60px;
 }
 
-/*********************************/
-/* 사이드바(동적) - 사이드바, 버튼 */
-/*********************************/
+/*************************************/
+/* 사이드바(동적) - 가상헤더, 탭, 버튼 */
+/*************************************/
 
-/* 텝 공간 만들기 */
-nav {
-    z-index: 1;
-    position: fixed;
-    top: 70px;
-    left: 0;
-    height: 80%;
-    width: 60px;
-    overflow: hidden;
-    /* 
-    background-color: red;
-     */
-}
+/****************************/
+/* 사이드바(동적) + 가상헤더 */
+/****************************/
 
-/* 가상 공간 만들기 */
+/* 가상헤더 공간 만들기 */
 nav div {
     z-index: 5;
     position: fixed;
@@ -52,12 +54,29 @@ nav div {
     background-color: burlywood;
 }
 
+/**********************/
+/* 사이드바(동적) + 탭 */
+/**********************/
+
+/* 탭 공간 만들기 */
+nav {
+    z-index: 1;
+    position: fixed;
+    top: 70px;
+    left: 0;
+    height: 80%;
+    width: 60px;
+    overflow: hidden;
+
+    /* background-color: red; */
+}
+
 /* 내비 체크박스 숨기기 */
 input[type="radio"] {
     display: none;
 }
 
-/* 내비 텝 이미지 */
+/* 내비 탭 이미지 */
 nav img {
     z-index: 6;
     position: relative;
@@ -89,7 +108,7 @@ input[type="radio"]:checked+label img {
     background-color: tomato;
 }
 
-/* 텝 클릭시 내용 출현 */
+/* 탭 클릭시 내용 출현 */
 input[id="num1"]:checked~aside>.con1 {
     display: block;
 }
@@ -110,68 +129,44 @@ input[id="num5"]:checked~aside>.con5 {
     display: block;
 }
 
-/* 버튼 공간 만들기 */
-#sidebutton {
-    position: fixed;
-    z-index: 6;
-    left: 410px;
-    background: none;
-    height: 50px;
-    width: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    overflow: hidden;
+/************************/
+/* 사이드바(동적) + 버튼 */
+/************************/
 
-    /* background-color: red; */
-}
-
-<<<<<<< HEAD
 /* 버튼 공간 만들기 */
 aside label {
-=======
-/* 버튼 스타일 */
-button {
->>>>>>> parent of 7532079 (맵 만들기 중)
     height: 50px;
     width: 20px;
-    font-size: 20px;
-    border-color: black;
-    border-width: 1px;
-    background-color: white;
-<<<<<<< HEAD
-    position: fixed;
-    left: 410px;
+    /* position: fixed; */
+    left: 20px;
+    /* left: 410px; */
     z-index: 5;
-    top: 50%;
-    transform: translateY(-50%);
-    overflow: hidden;
+    /* top: 50%; */
+    /* transform: translateY(-50%); */
+    /* overflow: hidden; */
+
+    background-color: red;
 }
 
 /* 버튼 스타일 */
-aside button {
+/* aside button {
     height: 50px;
     width: 20px;
     cursor: pointer;
-}
+} */
 
 /* 우측 버튼 안보이게 */
-#rbtn+label {
-=======
-    cursor: pointer;
-    position: absolute;
-}
-
-/* 우측 버튼 안보이게 */
-#button-right {
->>>>>>> parent of 7532079 (맵 만들기 중)
+/* #button-right {
     display: none;
-}
+} */
 
-#button-left:checked {
+
+
+/* #button-left:checked {
     background-color: black;
     color: white;
     outline: none;
-}
+} */
 
 
 
@@ -183,24 +178,36 @@ aside button {
 
 
 
+/* 체크박스 숨기기 */
+input[id="button"] {
+    display: none;
+}
 
+/* 버튼 스타일 */
+input[id="button"]~label {
+    display: block;
+    width: 20px;
+    height: 50px;
+    cursor: pointer;
+    overflow: hidden;
+    /* 글자 관련 */
+    text-align: center;
+    font-size: 30px;
+    /*  */
+    position: relative;
+}
 
+/* 오른쪽버튼 숨기기 */
+input[id="button"]~label[id="rbtn"]>div {
+    display: none;
+}
 
+/* 왼쪽버튼 누르면 숨기기 */
+input[id="button"]:checked~label[id="lbtn"]>div {
+    display: none;
+}
 
-
-
-
-
-
-
-
-/* 
-z-index로 보는 위치 정보
-홈버튼 10
-사이드 1
-
-텝이미지 6
-가상공간 5
-사이드바 4
-버튼 6
-*/
+/* 오른쪽버튼 누르면 숨기기 */
+input[id="button"]:checked~label[id="rbtn"]>div {
+    display: block;
+}
