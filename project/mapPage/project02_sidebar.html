@@ -7,11 +7,20 @@
     <!-- 지도가 있다고 가정 -->
     <main style="background-color:rgb(190, 190, 243); width:100%; height:100%; /* cursor: pointer; */">
     </main>
-    <!-- 사이드(정적) -->
+    <!-- 홈 -->
     <header>
         <a href="#"><img src="images/home.png" alt="메인페이지가기"></a>
     </header>
-    <!-- 사이드바(동적) -->
+    <!-- 버튼 -->
+    <input type="radio" id="left-button" name="btn">
+    <button id="lbtn" class="btn">
+        <label for="left-button">&lang;</label>
+    </button>
+    <input type="radio" id="right-button" name="btn" checked>
+    <button id="rbtn" class="btn">
+        <label for="right-button">&rang;</label>
+    </button>
+    <!-- 사이드바 -->
     <nav>
         <!-- 가상공간 -->
         <div>
@@ -27,6 +36,7 @@
         <label for="num4"><img src="images/home.png" alt=""></label>
         <input type="radio" name="sideTab" id="num5">
         <label for="num5"><img src="images/home.png" alt=""></label>
+
         <!-- 사이드바 -->
         <aside>
             <section class="conbox con1">
@@ -44,22 +54,6 @@
             <section class="conbox con5">
                 컨텐츠 탭 내용 05
             </section>
-            <!-- 버튼 -->
-            <input type="checkbox" id="button">
-            <br>
-            <br>
-            <label for="button" id="lbtn" class="btn">
-                <div>
-                    &lang;
-                </div>
-            </label>
-            <br>
-            <br>
-            <label for="button" id="rbtn" class="btn">
-                <div>
-                    &rang;
-                </div>
-            </label>
         </aside>
     </nav>
 </body>

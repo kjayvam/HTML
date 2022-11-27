@@ -1,17 +1,23 @@
 /* 
 z-index로 보는 위치 정보
+// 부모위치
 홈버튼 10
+버튼 10
 사이드 1
 
+// 사이드 위치
 탭이미지 6
 가상공간 5
 사이드바 4
-버튼 5
 */
 
 
+/**************************/
+/* 사이드(정적) - 홈, 버튼 */
+/**************************/
+
 /********************/
-/* 사이드(정적) - 홈 */
+/* 사이드(정적) + 홈 */
 /********************/
 
 /* 사이드 헤더 공간 만들기 */
@@ -35,6 +41,56 @@ header img {
     width: 60px;
 }
 
+/************************/
+/* 사이드바(정적) + 버튼 */
+/************************/
+
+/* 버튼 공간 만들기 */
+.btn {
+    padding: 0;
+    border: 0;
+    position: fixed;
+    z-index: 10;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 410;
+}
+
+/* 버튼 스타일 */
+.btn label {
+    padding: 15px 8px;
+    font-size: 16;
+    font-weight: 1000;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: white;
+    cursor: pointer;
+}
+
+/* 체크박스 숨기기 */
+input[id="button"] {
+    display: none;
+}
+
+/* 버튼 클릭시 버튼 스타일 */
+#left-button:checked+#lbtn {
+    display: none;
+}
+
+#right-button:checked+#rbtn {
+    display: none;
+}
+
+/* 왼쪽버튼 클릭시 사이드바의 변화 */
+#left-button:checked ~ nav > aside {
+    left: -289px;
+}
+/* 왼쪽버튼 클릭시 버튼 위치 변화 */
+#left-button:checked ~ .btn {
+    left: 61;
+}
+
+
 /*************************************/
 /* 사이드바(동적) - 가상헤더, 탭, 버튼 */
 /*************************************/
@@ -52,6 +108,8 @@ nav div {
     height: 100%;
     width: 60px;
     background-color: burlywood;
+    border-right-style: solid;
+    border-right-width: 1px;
 }
 
 /**********************/
@@ -91,15 +149,18 @@ nav img {
 }
 
 /* 사이드바 공간 만들기 */
-.conbox {
+aside {
     background-color: greenyellow;
     z-index: 4;
     position: fixed;
     top: 0;
-    left: 60px;
+    left: 61px;
     height: 100%;
     width: 350px;
     box-shadow: 0.1px 0 7px 0px;
+}
+/* 컨텐츠 공간 나누기 */
+.conbox {
     display: none;
 }
 
@@ -126,88 +187,5 @@ input[id="num4"]:checked~aside>.con4 {
 }
 
 input[id="num5"]:checked~aside>.con5 {
-    display: block;
-}
-
-/************************/
-/* 사이드바(동적) + 버튼 */
-/************************/
-
-/* 버튼 공간 만들기 */
-.btn {
-    height: 50px;
-    width: 20px;
-    position:fixed;
-    left: 50px;
-    /* left: 410px; */
-    z-index: 5;
-    /* top: 50%; */
-    /* transform: translateY(-50%); */
-    /* overflow: hidden; */
-
-    background-color: red;
-}
-
-/* 버튼 스타일 */
-/* aside button {
-    height: 50px;
-    width: 20px;
-    cursor: pointer;
-} */
-
-/* 우측 버튼 안보이게 */
-/* #button-right {
-    display: none;
-} */
-
-
-
-/* #button-left:checked {
-    background-color: black;
-    color: white;
-    outline: none;
-} */
-
-
-
-/* 버튼을 클릭하면 효과*/
-/* aside #button-left:checked~#sidebar-content {
-    left: 100px;
-    transform: translateX(50%)
-} */
-
-
-
-/* 체크박스 숨기기 */
-input[id="button"] {
-    display: none;
-}
-
-/* 버튼 스타일 */
-input[id="button"]~label {
-    display: block;
-    width: 20px;
-    height: 50px;
-    cursor: pointer;
-    overflow: hidden;
-    /* 글자 관련 */
-    text-align: center;
-    font-size: 30px;
-    /*  */
-    position: relative;
-}
-
-/* 오른쪽버튼 숨기기 */
-input[id="button"]~label[id="rbtn"]>div {
-    display: none;
-}
-
-/* 왼쪽버튼 누르면 숨기기 */
-input[id="button"]:checked~label[id="lbtn"]>div {
-    display: none;
-}
-
-/* 오른쪽버튼 누르면 숨기기 */
-input[id="button"]:checked~label[id="rbtn"]>div {
     display: block;
 }

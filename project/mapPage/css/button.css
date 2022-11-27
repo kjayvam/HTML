@@ -1,33 +1,48 @@
-/* 체크박스 숨기기 */
-input[id="button"] {
-    display: none;
+aside {
+    padding: 50;
+    background-color: aqua;
+}
+
+aside section {
+    background-color: yellow;
+}
+
+/* input 숨기기 */
+input {
+    /* display: none; */
+}
+
+/* 버튼 공간 만들기 */
+.btn {
+    padding: 0;
+    border: 0;
+    /* position: fixed; */
+    z-index: 10;
+    /* top: 50%; */
+    /* transform: translateY(-50%); */
+    /* left: 410; */
 }
 
 /* 버튼 스타일 */
-input[id="button"]~label {
-    display: block;
-    width: 20px;
-    height: 50px;
+.btn label {
+    padding: 10px;
+    font-size: 16;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: black;
+    color: white;
     cursor: pointer;
-    overflow: hidden;
-    /* 글자 관련 */
-    text-align: center;
-    font-size: 30px;
-    /*  */
-    position: relative;
 }
 
-/* 오른쪽버튼 숨기기 */
-input[id="button"]~label[id="rbtn"]>div {
+/* 버튼 클릭시 안보이게 */
+#right-button:checked+#rbtn {
     display: none;
 }
 
-/* 왼쪽버튼 누르면 숨기기 */
-input[id="button"]:checked~label[id="lbtn"]>div {
+#left-button:checked+#lbtn {
     display: none;
 }
 
-/* 오른쪽버튼 누르면 숨기기 */
-input[id="button"]:checked~label[id="rbtn"]>div {
-    display: block;
+#left-button:checked ~ aside > section {
+    background-color: white;
 }
