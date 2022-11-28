@@ -53,7 +53,7 @@ header img {
     z-index: 10;
     top: 50%;
     transform: translateY(-50%);
-    left: 410;
+    left: 411px;
 }
 
 /* 버튼 스타일 */
@@ -63,6 +63,7 @@ header img {
     font-weight: 1000;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
+    border-left: 1px solid;
     background-color: white;
     cursor: pointer;
 }
@@ -87,7 +88,7 @@ input[id="button"] {
 }
 /* 왼쪽버튼 클릭시 버튼 위치 변화 */
 #left-button:checked ~ .btn {
-    left: 61;
+    left: 60px;
 }
 
 
@@ -150,7 +151,7 @@ nav img {
 
 /* 사이드바 공간 만들기 */
 aside {
-    background-color: greenyellow;
+    background-color: white;
     z-index: 4;
     position: fixed;
     top: 0;
@@ -158,10 +159,13 @@ aside {
     height: 100%;
     width: 350px;
     box-shadow: 0.1px 0 7px 0px;
+    text-align: center;
+    overflow: hidden;
 }
 /* 컨텐츠 공간 나누기 */
 .conbox {
     display: none;
+    padding: 20px;
 }
 
 /* 내비 탭 클릭시 이미지 변화 */
