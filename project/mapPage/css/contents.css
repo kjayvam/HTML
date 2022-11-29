@@ -7,17 +7,54 @@ aside {
     overflow: hidden;
 }
 
-.conbox {
-    padding: 20px;
-}
+.conbox {}
+
+/*  */
+/*  */
+/*  */
+
 
 /* 만들기 */
 
+/* 검색창 공간 만들기 */
+#search {
+    padding-bottom: 30px;
+    border-bottom: 1px solid;
+    padding: 20px;
+}
 
-
-/* 검색창 만들기 */
+/* 검색창 스타일 */
 input[type="text"] {
     width: 200px;
     height: 50px;
     font-size: 25px;
+}
+
+/* 검색버튼 스타일 */
+input[type="submit"] {
+    width: 100px;
+    height: 100px;
+    vertical-align: top;
+    float: right;
+}
+
+/* 테이블 중앙 정렬 */
+#container table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* 테이블 이미지 크기 */
+#container img {
+    width: 300px;
+}
+
+/* 스크롤 만들기 */
+#container {
+    margin: 0;
+    border: 0;
+    height: 85%;
+    width: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
