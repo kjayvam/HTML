@@ -1,3 +1,18 @@
+/* 초기화 */
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    z-index: 0;
+    font: inherit; /* 글자 부모요소 상속 */
+    line-height: 1; /* 세로 높이의 위쪽 기준 */
+    text-align: left; /* 가로 너비의 왼쪽 기준 */
+    list-style: none; /* 목록을 없애기 */
+    quotes: none; /* 인용문 없애기 */
+    border-collapse: collapse; /* 표의 테두리와 셀의 사이 간격을 없앰 */
+    border-spacing: 0; /* 표의 테두리와 셀 사이 간격을 0으로 */
+}
+
 /* 지도 크기 */
 #map {
     width: 100%;
@@ -5,6 +20,304 @@
     height: 100%;
     /* 지도 높이 */
 }
+
 html, body {
-	height: 100%;
+    height: 100%;
 }
+
+/*
+z-index로 보는 위치 정보
+// 부모위치
+홈버튼 10
+버튼 10
+사이드 1
+
+// 사이드 위치
+탭이미지 6
+가상공간 5
+사이드바 4
+*/
+
+/**************************/
+/* 사이드(정적) - 홈, 버튼 */
+/**************************/
+
+/********************/
+/* 사이드(정적) + 홈 */
+/********************/
+
+/* 사이드 헤더 공간 만들기 */
+header {
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: 10;
+}
+
+/* 홈 이미지 */
+header img {
+    background-color: aqua;
+    height: 60px;
+    width: 60px;
+}
+
+/************************/
+/* 사이드바(정적) + 버튼 */
+/************************/
+
+/* 버튼 공간 만들기 */
+.btn {
+    padding: 0;
+    border: 0;
+    position: fixed;
+    z-index: 10;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 411px;
+}
+
+/* 버튼 스타일 */
+.btn label {
+    padding: 15px 8px;
+    font-size: 16px;
+    font-weight: 1000;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-left: 1px solid;
+    background-color: white;
+    cursor: pointer;
+}
+
+/* 체크박스 숨기기 */
+input[id="button"] {
+    display: none;
+}
+
+/* 버튼 클릭시 버튼 스타일 */
+#left-button:checked + #lbtn {
+    display: none;
+}
+
+#right-button:checked + #rbtn {
+    display: none;
+}
+
+/* 왼쪽버튼 클릭시 사이드바의 변화 */
+#left-button:checked ~ nav > aside {
+    left: -289px;
+}
+
+/* 왼쪽버튼 클릭시 버튼 위치 변화 */
+#left-button:checked ~ .btn {
+    left: 60px;
+}
+
+/************************************/
+/* 사이드바(동적) - 가상헤더, 탭, 버튼 */
+/************************************/
+
+/***************************/
+/* 사이드바(동적) + 가상헤더 */
+/***************************/
+
+/* 가상헤더 공간 만들기 */
+nav div {
+    z-index: 5;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 60px;
+    background-color: burlywood;
+    border-right-style: solid;
+    border-right-width: 1px;
+}
+
+/**********************/
+/* 사이드바(동적) + 탭 */
+/**********************/
+
+/* 탭 공간 만들기 */
+nav {
+    z-index: 1;
+    position: fixed;
+    top: 70px;
+    left: 0;
+    height: 80%;
+    width: 60px;
+    overflow: hidden;
+}
+
+/* 내비 체크박스 숨기기 */
+input[type="radio"] {
+    display: none;
+}
+
+/* 내비 탭 글자 */
+nav label a {
+    display: block;
+    width: 100%;
+    height: 60px;
+    text-align: center;
+    z-index: 6;
+    position: relative;
+    background-color: white;
+    padding: 10px 0;
+    border-style: solid;
+    border-width: 1px 0;
+    line-height: 60px;
+    cursor: pointer;
+}
+
+/* 사이드바 공간 만들기 */
+aside {
+    background-color: white;
+    z-index: 4;
+    position: fixed;
+    top: 0;
+    left: 61px;
+    height: 100%;
+    width: 350px;
+    box-shadow: 1px 0 7px 1px;
+    text-align: center;
+    overflow: hidden;
+}
+
+/* 컨텐츠 공간 나누기 */
+.conbox {
+    height: 100%;
+    display: none;
+}
+
+/* 내비 탭 클릭시 글자 변화 */
+input[type="radio"]:checked + label a {
+    background-color: tomato;
+}
+
+/* 탭 클릭시 내용 변경 */
+input[id="num1"]:checked ~ aside > .con1 {
+    display: block;
+}
+
+input[id="num2"]:checked ~ aside > .con2 {
+    display: block;
+}
+
+input[id="num3"]:checked ~ aside > .con3 {
+    display: block;
+}
+
+input[id="num4"]:checked ~ aside > .con4 {
+    display: block;
+}
+
+input[id="num5"]:checked ~ aside > .con5 {
+    display: block;
+}
+
+input[id="num6"]:checked ~ aside > .con6 {
+    display: block;
+}
+
+input[id="num7"]:checked ~ aside > .con7 {
+    display: block;
+}
+
+input[id="num8"]:checked ~ aside > .con8 {
+    display: block;
+}
+
+input[id="num9"]:checked ~ aside > .con9 {
+    display: block;
+}
+
+input[id="num10"]:checked ~ aside > .con10 {
+    display: block;
+}
+
+/*************/
+/* 탭 - 전체 */
+/*************/
+
+/* 라벨 커서넣기 */
+#search span input, label {
+    cursor: pointer;
+}
+
+/* 검색창 스타일 */
+input[type="text"] {
+    width: 200px;
+    height: 50px;
+    font-size: 25px;
+    margin-bottom: 10px;
+    border-style: solid;
+    border-width: 3px;
+    border-color: blue;
+    border-radius: 10px;
+}
+
+/* 검색버튼 스타일 */
+input[type="submit"] {
+    text-align: center;
+    vertical-align: top;
+    float: right;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 25px;
+}
+
+/* 스크롤 만들기 */
+#container {
+    height: 100%;
+    overflow: scroll;
+}
+
+/* 테이블 이미지 크기 */
+table img {
+    width: 300px;
+    border: none;
+}
+
+/* 테이블 중앙 정렬 */
+table {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+/* 글자 여백 */
+td {
+    padding: 5px;
+}
+
+/* 마지막 테이블 아래에 공간 만들기 */
+#container table:last-of-type {
+    margin-bottom: 50px;
+}
+
+/**************/
+/* 탭2 - 한식 */
+/**************/
+
+/* 검색창 공간 만들기 */
+#search {
+    background-color: yellow;
+    padding: 20px 20px 30px;
+    border-bottom: 1px solid;
+}
+
+/* 검색버튼 스타일 */
+.con2 input[type="submit"] {
+    width: 100px;
+    height: 120px;
+}
+
+.con2 form[id="container"] {
+    top: 165px;
+}
+
+
+
+
