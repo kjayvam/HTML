@@ -246,7 +246,7 @@ input[id="num10"]:checked ~ aside > .con10 {
 }
 
 /* 검색창 스타일 */
-input[type="text"] {
+input[type="search"] {
     width: 200px;
     height: 50px;
     font-size: 25px;
