@@ -42,27 +42,30 @@
     font-size: 50px;
 }
 
-/******************/
-/* 콘텐츠 - 회원가입 */
-/******************/
+/*****************************************/
+/* 콘텐츠 - 비밀번호찾기(전화번호, 이메일) */
+/*****************************************/
 
 /* 콘텐츠 공간 만들기 */
 #container {
     width: 100%;
-    height: 1300px;
+    height: 750px;
+    font-size: 0px;
+    min-width: 400px;
 }
 
-/* 회원가입 공간 만들기 */
-#contents {
+/* 비밀번호찾기 공간 만들기 */
+.contents {
     width: 350px;
-    margin-top: 100px;
+    margin-top: 50px;
     margin-bottom: 300px;
     margin-left: auto;
     margin-right: auto;
+    font-size: 16px;
 }
 
-/* 회원가입 입력창 스타일 */
-#contents input, select {
+/* 비밀번호찾기 입력창 스타일 */
+.contents input {
     width: 300px;
     border-style: solid;
     border-width: thin;
@@ -72,14 +75,8 @@
     margin: 10px 0px 30px;
 }
 
-/* 성별 스타일 */
-#contents select {
-    width: 342px;
-}
-
-
-/* 회원가입 버튼 스타일 */
-#contents #signUp_button {
+/* 비밀번호찾기 버튼 스타일 */
+.contents #pwFind_button {
     margin-top: 30px;
     background-color: #FE750E;
     color: white;
@@ -89,6 +86,51 @@
     width: 342px;
     height: 63px;
     border-radius: 10px;
+    cursor: pointer;
+}
+
+/******************/
+/* 콘텐츠 - 탭메뉴 */
+/******************/
+
+/* 라디오 숨기기 */
+input[type="radio"] {
+    display: none;
+}
+
+/* 탭메뉴 스타일 */
+input[type="radio"]+label {
+    width: 150px;
+    margin-top: 100px;
+    display: inline-block;
+    padding: 20px;
+    background-color: #aaa;
+    color: white;
+    font-size: 16px;
+    width: 150px;
+    cursor: pointer;
+    text-align: center;
+    position: relative;
+    left: 50%;
+    transform: translateX(-100%);
+    border-radius: 10px 10px 0 0;
+}
+/* 탭메뉴 체크시 스타일 */
+input[type="radio"]:checked + label{
+    background-color: #FE750E;
+}
+
+/* 콘텐츠 숨기기 */
+.contents {
+    display: none;
+}
+/* 탭 체크시 콘텐츠 나타남 */
+#tab01:checked ~ .tab01 {
+    display: block;
+}
+
+#tab02:checked ~ .tab02 {
+    display: block;
 }
 
 /********/

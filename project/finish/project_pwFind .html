@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>pw Find Page</title>
+    <link rel="stylesheet" href="css/pwFind.css">
+</head>
+
+<body>
+    <div id="header">
+        <a href="#">착한가격업소</a>
+    </div>
+    <div id="container">
+        <!-- 탭메뉴 01 -->
+        <input type="radio" name="tab" id="tab01" checked>
+        <label for="tab01">전화번호로 찾기</label>
+        <!-- 탭메뉴 02 -->
+        <input type="radio" name="tab" id="tab02">
+        <label for="tab02">이메일로 찾기</label>
+        <!-- 탭메뉴 01 -->
+        <form action="" class="contents tab01">
+            아이디
+            <input type="text">
+            전화번호
+            <input type="tel">
+            <input type="submit" value="비밀번호 찾기" id="pwFind_button">
+        </form>
+        <!-- 탭메뉴 02 -->
+        <form action="" class="contents tab02">
+            아이디
+            <input type="text">
+            이메일
+            <input type="email">
+            <input type="submit" value="비밀번호 찾기" id="pwFind_button">
+        </form>
+    </div>
+    <div id="footer">
+        <!-- 소개 -->
+        <div id="bottomMenu">
+            <ul>
+                <li><a href="#">개발자 소개1</a></li>
+                <span></span>
+                <li><a href="#">개발자 소개2</a></li>
+                <span></span>
+                <li><a href="#">개발자 소개3</a></li>
+            </ul>
+        </div>
+        <!-- 주소 -->
+        <div id="company">
+            (04104)서울 마포구 신촌로 176(대흥동 12-20) 중앙정보처리학원
+        </div>
+    </div>
+</body>
+
+</html>
