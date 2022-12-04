@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="a68189c2-8ec9-4764-a8dd-4cedfe5fd4ab" name="Changes" comment="Changes" />
     <option name="SHOW_DIALOG" value="false" />
@@ -30,12 +33,24 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/developer/gitHub/synchronization/HTML/project&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/developer/gitHub/synchronization/HTML/project/finish/css&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.Mappings&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\developer\gitHub\synchronization\HTML\project\finish\css" />
+      <recent name="D:\developer\gitHub\synchronization\HTML\project\finish" />
+      <recent name="D:\developer\gitHub\synchronization\HTML\project\signUp\css" />
+      <recent name="D:\developer\gitHub\synchronization\HTML\project\signUp" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\developer\gitHub\synchronization\HTML\project\finish\css" />
+      <recent name="D:\developer\gitHub\synchronization\HTML\project\finish" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="project_Map.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/project/finish/project_Map.html" useBuiltInWebServerPort="true">
       <method v="2" />
@@ -55,6 +70,10 @@
       <workItem from="1669734826502" duration="10644000" />
       <workItem from="1669745494799" duration="1939000" />
       <workItem from="1669747456770" duration="13000" />
+      <workItem from="1669980856130" duration="2618000" />
+      <workItem from="1670042054845" duration="13646000" />
+      <workItem from="1670098003740" duration="9799000" />
+      <workItem from="1670134845588" duration="2957000" />
     </task>
     <servers />
   </component>
