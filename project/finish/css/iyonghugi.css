@@ -243,20 +243,34 @@
     text-align: left;
 }
 
-/************************/
+/*************************/
 /* 메인 - 콘텐츠 + PASING */
-/************************/
+/*************************/
 
 /* 페이징 공간 만들기 */
 #pasing {
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
+
 }
 
 #pasing a {
     background-color: #FE750E;
     color: white;
     padding: 5px 10px;
+}
+
+/*************************/
+/* 메인 - 콘텐츠 + 글작성 */
+/*************************/
+
+#tab input[type="button"] {
+    background-color: #FE750E;
+    color: white;
+    padding: 5px 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-bottom: 50px;
 }
 
 /*************************/
