@@ -258,19 +258,24 @@
     background-color: #FE750E;
     color: white;
     padding: 5px 10px;
+    cursor: pointer;
 }
 
 /*************************/
 /* 메인 - 콘텐츠 + 글작성 */
 /*************************/
 
-#tab input[type="button"] {
+#tab #write {
+    margin-bottom: 50px;
+}
+
+#tab #write a {
     background-color: #FE750E;
+    text-decoration: none;
     color: white;
     padding: 5px 10px;
     font-size: 16px;
     border-radius: 5px;
-    margin-bottom: 50px;
 }
 
 /*************************/

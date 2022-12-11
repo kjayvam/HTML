@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ko">
+<!-- 검색에 시·도 및 카테고리를 조금더 상세하게 하기 -->
+<head>
+    <meta charset="UTF-8">
+    <title>착한가격업소 - 검색하기</title>
+    <link rel="stylesheet" href="css/search.css">
+</head>
+
+<body>
+    <!-- 헤드 -->
+    <div id="header">
+        <!-- 로고 -->
+        <div id="logo">
+            <a href="#">착한가격업소</a>
+        </div>
+        <!-- 내비게이션 -->
+        <div id="nev">
+            <ul id="topMenu">
+                <li><a href="#">정책홍복</a>
+                    <ul>
+                        <li><a href="#">소비자편</a></li>
+                        <li><a href="#">업소편</a></li>
+                    </ul>
+                </li>
+                <li><a href="http://127.0.0.1:5500/finish/project_Map.html">지도</a></li>
+                <li><a href="#">검색</a></li>
+                <li><a href="#">커뮤니티</a>
+                    <ul>
+                        <li><a href="#">공지사항</a></li>
+                        <li><a href="#">이용후기</a></li>
+                        <li><a href="#">문의하기</a></li>
+                    </ul>
+                </li>
+                <li><a href="http://127.0.0.1:5500/finish/project_login.html">마이페이지</a>
+                    <ul>
+                        <li><a href="#">즐겨찾기</a></li>
+                        <li><a href="#">리뷰보기</a></li>
+                        <li><a href="#">문의보기</a></li>
+
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- 메인 -->
+    <div id="container">
+        <!--search-->
+        <div id="search">
+            <form action="">
+                <select>
+                    <option value="시·도" selected>시·도</option>
+                    <option value="서울">서울</option>
+                    <option value="인천">인천</option>
+                    <option value="경기">경기도</option>
+                    <option value="대전">대전</option>
+                    <option value="대구">대구</option>
+                    <option value="울산">울산</option>
+                    <option value="부산">부산</option>
+                    <option value="제주">제주도</option>
+                    <option value="강원">강원도</option>
+                    <option value="충북">충북</option>
+                    <option value="충남">충남</option>
+                    <option value="전북">전북</option>
+                    <option value="전남">전남</option>
+                    <option value="경북">경북</option>
+                    <option value="경남">경남</option>
+                </select>
+                <select>
+                    <option value="종류" selected>카테고리</option>
+                    <option value="한식">한식</option>
+                    <option value="중식">중식</option>
+                    <option value="일식">일식</option>
+                    <option value="양식">양식</option>
+                    <option value="동남">동남아</option>
+                    <option value="후식">후식</option>
+                    <option value="이미용">이미용</option>
+                    <option value="숙박업">숙박업</option>
+                    <option value="기타">기타</option>
+                </select>
+                <input type="text">
+                <input type="submit" value="검색">
+            </form>
+        </div>
+        <!--탭 메뉴-->
+        <div id="tab">
+            <input type="radio" name="tab" id="r01" checked>
+            <label for="r01">아이콘보기</label>
+            <input type="radio" name="tab" id="r02">
+            <label for="r02">리스트보기</label>
+            <!--콘텐츠 + icon-->
+            <div class="contents icon">
+                <table>
+                    <tr>
+                        <td>
+                            <a href="#">
+                                <img src="images/식당1.jpg" alt="식당1">
+                                <p>식당1</p>
+                                <p>&nbsp; 010-1111-1111</p>
+                                <p>&nbsp;&nbsp;&nbsp; 1000 원</p>
+                            </a>
+                        </td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <td>
+                            <a href="#">
+                                <img src="images/식당2.jpg" alt="식당2">
+                                <p>식당2</p>
+                                <p>&nbsp; 010-2222-2222</p>
+                                <p>&nbsp;&nbsp;&nbsp; 2000 원</p>
+                            </a>
+                        </td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <td>
+                            <a href="#">
+                                <img src="images/식당3.jpeg" alt="식당3">
+                                <p>식당3</p>
+                                <p>&nbsp; 010-3333-3333</p>
+                                <p>&nbsp;&nbsp;&nbsp; 3000 원</p>
+                            </a>
+                        </td>
+                    </tr>
+                </table>
+                <div id="pasing">
+                    <a>1</a>
+                </div>
+            </div>
+            <!--콘텐츠 + list-->
+            <div class="contents list">
+                <ul>
+                    <li>
+                        <a href="">
+                            <div>
+                                <img src="images/식당1.jpg" alt="식당1">
+                            </div>
+                            <p>식당1</p>
+                            <p>&nbsp; 010-1111-1111</p>
+                            <p>&nbsp;&nbsp;&nbsp; 1000 원</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div>
+                                <img src="images/식당2.jpg" alt="식당2">
+                            </div>
+                            <p>식당2</p>
+                            <p>&nbsp; 010-2222-2222</p>
+                            <p>&nbsp;&nbsp;&nbsp; 2000 원</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div>
+                                <img src="images/식당3.jpeg" alt="식당3">
+                            </div>
+                            <p>식당3</p>
+                            <p>&nbsp; 010-3333-3333</p>
+                            <p>&nbsp;&nbsp;&nbsp; 3000 원</p>
+                        </a>
+                    </li>
+                </ul>
+                <div id="pasing">
+                    <a>2</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 푸터 -->
+    <div id="footer">
+        <!-- 소개 -->
+        <div id="bottomMenu">
+            <ul>
+                <li><a href="#">개발자 소개1</a></li>
+                <li><a href="#">개발자 소개2</a></li>
+                <li><a href="#">개발자 소개3</a></li>
+                <!-- 주소 -->
+                <li id="company">(04104)서울 마포구 신촌로 176(대흥동 12-20) 중앙정보처리학원</li>
+            </ul>
+        </div>
+        <!-- 링크 -->
+        <section id="sns">
+            <ul>
+                <li><a href="#"><img src="images/sns-1.png"></a></li>
+                <li><a href="#"><img src="images/sns-2.png"></a></li>
+                <li><a href="#"><img src="images/sns-3.png"></a></li>
+
+            </ul>
+        </section>
+    </div>
+</body>
+
+</html>
