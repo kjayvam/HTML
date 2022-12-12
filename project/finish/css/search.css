@@ -290,6 +290,7 @@
 
 .icon table img {
     width: 100%;
+    aspect-ratio: 1/1;
 }
 
 .icon table a {
@@ -315,6 +316,7 @@
     border-color: #aaa;
     border-style: solid;
     border-width: thin;
+    border-radius: 10px;
 }
 
 /* 이미지 공간 만들기 */
@@ -328,6 +330,7 @@
 /* 목록 스타일 */
 .list ul li img {
     height: 100%;
+    aspect-ratio: 4/3;
 }
 
 .list ul li a {

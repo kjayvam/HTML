@@ -1,28 +1,27 @@
-/* 기본 셋팅 */
+/* 초기화 */
 * {
     margin: 0;
-    /* 마진 리셋 */
+    border: 0;
     padding: 0;
-    /* 패딩 리셋 */
-    box-sizing: border-box;
-    /* 박스영역은 테두리까지 */
-}
-
-a {
-    text-decoration: none;
-    /* 텍스트 링크 밑줄 없애기 */
-}
-
-ul {
+    z-index: 0;
+    font: inherit;
+    /* 글자 부모요소 상속 */
+    vertical-align: baseline;
+    /* 글자 아래 라인에 맞춤 */
+    font-size: 100%;
+    /* 16px */
+    line-height: 1;
+    /* 세로 높이의 위쪽 기준 */
+    text-align: left;
+    /* 가로 너비의 왼쪽 기준 */
     list-style: none;
-    /* 목록표시 없애기 */
-}
-
-#container {
-    margin: 0 auto;
-    /* 화면 중앙에 배치 */
-    width: 1440px;
-    /* 너비 */
+    /* 목록을 없애기 */
+    quotes: none;
+    /* 인용문 없애기 */
+    border-collapse: collapse;
+    /* 표의 테두리와 셀의 사이 간격을 없앰 */
+    border-spacing: 0;
+    /* 표의 테두리와 셀 사이 간격을 0으로 */
 }
 
 /**************************/
@@ -30,21 +29,15 @@ ul {
 /**************************/
 
 /* 헤더 공간 만들기 */
-header {
-    width: 1440px;
-    /* 너비 */
+#header {
+    width: 100%;
     height: 100px;
-    /* 높이 */
+    border-bottom-style: solid;
+    border-bottom-width: thin;
     background-color: white;
-    /* 배경색 */
-    display: block;
-    /* 블록요소로 배치 */
-    align-items: center;
-    /* 세로축 중앙 배치 */
     position: fixed;
-    /* 포지션 화면 고정 */
     z-index: 5;
-    /* 메인보다 우선순위 높게 설정 */
+    min-width: 810px;
 }
 
 /***************/
@@ -53,143 +46,116 @@ header {
 
 /* 로고 공간 만들기 */
 #logo {
+    height: 100%;
+    text-align: center;
     float: left;
-    /* 왼쪽 배치 */
-    width: 140px;
-    /* 너비 */
-    height: 100px;
-    /* 높이 */
-    padding: 10px 20px;
-    /* 왼쪽 여백 */
-    overflow: hidden;
-    /* 공간을 넘으면 숨김 */
+    transform: translateY(30%);
+    margin: 0 20px;
 }
 
-/* 로고 이미지 크기 */
-#logo img {
-    width: 100px;
-    /* 너비 */
-    height: 80px;
-    /* 높이 */
-    background-color: #686cff;
+/* 로고 스타일 */
+#logo a {
+    color: #FE750E;
+    text-decoration: none;
+    font-size: 40px;
+    font-weight: bold;
 }
 
 /********************/
 /* 헤더 + 내비게이션 */
 /********************/
 
-/* 내비게이션 공간 만들기*/
-header nav {
+/* 내비 공간 만들기 */
+#nev {
     width: 100%;
-    /* 로고 제외한 너비 */
     height: 100px;
-    /* 높이 */
-    padding-top: 40px;
-    /* 메뉴 위에 공간 만듦 */
     font-size: 0;
-    /* 글자 크기 초기화 */
+    margin-top: 60px;
 }
 
-/* 내비게이션 위치 */
+/* 내비 위치 */
 #topMenu {
     float: right;
-    /* 오른쪽으로 플로팅 */
 }
 
-/* 메인 메뉴 위치 */
+/* 목록 위치 */
 #topMenu>li {
     float: left;
-    /* 메뉴 항목을 왼쪽으로 배치 */
     position: relative;
-    /* 메인 메뉴 표지셔닝 */
 }
 
-/* 메인 메뉴 링크 스타일 */
+/* 메인메뉴 글자 스타일 */
 #topMenu>li>a {
-    padding: 16.5px 60px;
-    /* 패딩 */
-    display: block;
-    /* 링크 텍스트는 블록까지 범위 넓힘 */
     color: black;
-    /* 글자 색 */
+    padding: 10px 20px;
+    display: block;
     font-size: 20px;
-    /* 글자 크기 */
-    font-weight: 1000;
-    /* 글자 굵기 */
+    font-weight: bold;
+    text-decoration: none;
 }
 
-/* 메인 메뉴 마우스 올릴 때 효과 */
-#topMenu>li>a:hover {
-    color: red;
-    /* 글자 색상 */
+/* 서브메뉴 글자 스타일 */
+#topMenu a {
+    padding: 10px 20px;
+    font-size: 16px;
+    text-decoration: none;
+    color: black;
+    display: block;
+    background-color: white;
 }
 
-/* 서브 메뉴 배경 스타일 */
+/* 서브메뉴 배경 스타일 */
 #topMenu>li>ul {
     display: none;
-    /* 서브 메뉴 처음에는 화면에 안 보이게 */
     position: absolute;
-    /* 서브 메뉴 포지셔닝 */
-    width: 160px;
-    /* 너비 */
-    background-color: rgb(233, 233, 233);
-    /* 배경색 */
-    left: 20px;
-    /* 메인 메뉴기준 서브 메뉴 위치 */
+    background-color: white;
+    width: 110px;
 }
 
-/* 서브 메뉴 크기 */
-#topMenu>li>ul>li {
-    padding: 10px 10px 10px 30px;
-    /* 서브 메뉴 공간 확보 */
+/*************/
+/* 내비 효과 */
+/*************/
+
+/* 메인메뉴 마우스 올릴 때 효과 */
+#topMenu>li>a:hover {
+    color: #FE750E;
+    border-bottom-style: solid;
+    border-bottom-width: medium;
 }
 
-/* 메인 메뉴 마우스 올릴 때 서브메뉴 효과 */
+/* 메인메뉴 마우스 올릴 때 서브메뉴 효과 */
 #topMenu>li:hover>ul {
     display: block;
-    /* 메인 메뉴 항목 위로 오버하면 서브 메뉴 표시 */
     z-index: 10;
-    /* 슬라이드 쇼에 가리지 않게 조절 (우선순위)*/
 }
 
-/* 서브 메뉴 링크 스타일 */
-#topMenu>li>ul>li>a {
-    font-size: 14px;
-    /* 글자 크기 */
-    padding: 10px;
-    /* 여백 */
-    color: black;
-    /* 색상 */
-}
-
-/* 서브 메뉴 마우스 올릴 때 효과 */
+/* 서브메뉴 마우스 올릴 때 효과 */
 #topMenu>li>ul>li>a:hover {
-    color: blue;
-    /* 글자 색상 */
-    text-decoration: underline;
-    /* 글자 밑줄 */
+    color: #FE750E;
+    border-bottom-style: solid;
+    border-bottom-width: medium;
 }
 
-/********************************************/
-/* 메인 - 슬라이드 쇼, 탭메뉴(아이콘, 리스트) */
-/********************************************/
+/****************/
+/* 메인 - 콘텐츠 */
+/****************/
 
-/* 메인 공간 만들기*/
-main {
-    top: 100px;
-    /* 헤더 공간 확보 */
+/*콘텐츠 공간 만들기*/
+#container {
+    font-size: 16px;
+    padding-top: 120px;
+    color: black;
+    width: 100%;
+}
+
+/*콘텐츠 공간 나누기*/
+#container #con-top,
+#tab {
     clear: both;
-    /* 플로팅 해제 */
-    width: 1200px;
-    /* 너비 */
-    height: 2500px;
-    /* 높이 */
-    overflow: hidden;
-    /* 영역 넘치면 감춤 */
-    position: relative;
-    /* 메인 포지션 */
-    float: left;
-    /* 왼쪽에 배치 (우측 사이드바) */
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1000px;
 }
 
 /*********************/
@@ -198,292 +164,212 @@ main {
 
 /* 슬라이드 공간 만들기*/
 #slide {
-    float: left;
-    /* 왼쪽 배치 */
-    width: 1200px;
-    /* 너비 */
-    height: 500px;
-    /* 높이 */
+    width: 70%;
+    aspect-ratio: 4/3;
+    margin-left: auto;
+    margin-right: auto;
     overflow: hidden;
-    /* 공간을 넘으면 숨김 */
-    position: absolute;
-    /* 슬라이드 포지션 */
+    position: relative;
 }
 
 /* 슬라이드의 이미지 크기 */
 #slide img {
     width: 100%;
-    /* 너비 */
     height: 100%;
-    /* 높이 */
     float: left;
-    /* 왼쪽 배치 */
 }
 
 /* 슬라이드 버튼 스타일 */
-button {
+#slide button {
     position: absolute;
-    /* 버튼 포지션 */
     height: 100%;
-    /* 버튼 크기 */
     top: 0;
-    /* 버튼을 위에 붙임 */
     border: none;
-    /* 테두리 없이 */
     padding: 0 20px;
-    /* 버튼 가로 공간 */
     background-color: transparent;
-    /* 투명 배경 */
     color: black;
-    /* 화살표 색은 검정 */
     font-weight: 800;
-    /* 굵게 */
     font-size: 60px;
-    /* 화살표 크기 */
     opacity: 0.5;
-    /* 화살표 반투명 */
 }
 
 /* 왼쪽 버튼 위치 */
-#button-left {
+#slide #button-left {
     left: 0;
-    /* 왼쪽으로 붙여서 */
 }
 
 /* 오른쪽 버튼 위치 */
-#button-right {
+#slide #button-right {
     right: 0;
-    /* 오른쪽으로 붙여서 */
 }
 
 /* 버튼에 마우스 올릴 때 효과 */
-button:hover {
+#slide button:hover {
     background-color: #222;
-    /* 짙은 회색 배경 */
     color: #fff;
-    /* 흰색 화살표 */
     opacity: 0.6;
-    /* 화살표 불투명도를 조금 높임 */
     cursor: pointer;
-    /* 커서 모양을 포인터로 */
 }
 
-/**************************/
-/* 메인 + 탭메뉴(선택방법) */
-/**************************/
+/***********************/
+/* 메인 - 콘텐츠 + TAB */
+/***********************/
 
-/* 탭메뉴 위치 설정 */
-.tabMenu {
-    margin-top: 530px;
-    /* 탭메뉴 위치 설정 */
+/* 텝 공간 만들기 */
+#tab {
     font-size: 0;
-    /* 폰트초기화로 메뉴와 메뉴사이 공간 없애기 */
+    margin-top: 50px;
 }
 
-/* 라디오 체크(동그란거) 설정 */
-input[type="radio"] {
+/* 라디오 숨기기 */
+#tab input[type="radio"] {
     display: none;
-    /* 라디오 숨기기 */
 }
 
-/* 라디오 라벨의 기본 설정 */
-input[type="radio"]+label {
-    display: inline-block;
-    /* 화면에 보이는 속성을 설정 */
-    padding: 20px;
-    /* 여백 설정 */
-    background-color: black;
-    /* 배경색 */
+/* 라벨 스타일 */
+#tab label {
+    background-color: #aaa;
     color: white;
-    /* 글자색 */
-    font-size: 14px;
-    /* 글자 크기 */
+    font-size: 16px;
+    padding: 20px 40px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
     cursor: pointer;
-    /* 마우스 올리면 커서로 바뀜 */
 }
 
-/* 라디오 체크시 라벨 효과 */
-input[type="radio"]:checked+label {
-    padding: 16px;
-    /* 여백 */
-    background-color: #0066ff;
-    /* 배경색 */
-    color: yellow;
-    /* 글자색 */
-    font-weight: 900;
-    /* 글자 굵기 */
-    font-size: 20px;
-    /* 글자 크기 */
+/**********************/
+/* 콘텐츠 체크 시 효과 */
+/**********************/
+
+/* 라벨 체크 스타일 */
+#tab input[type="radio"]:checked+label {
+    background-color: #FE750E;
 }
 
-/* 탭메뉴 내용 기본 설정 */
-.con-box {
+/* 내용 숨기기 */
+#tab>.contents {
     display: none;
-    /* 안보이게 설정 */
 }
 
-/* 1번 라디오 체크시 아이콘 보여줌 */
-input[id="tab01"]:checked~.icon {
+/* 라벨 체크 시 해당내용 표시 */
+#tab input[id="r01"]:checked~.icon {
     display: block;
+
 }
 
-/* 2번 라디오 체크시 리스트 보여줌 */
-input[id="tab02"]:checked~.list {
+#tab input[id="r02"]:checked~.list {
     display: block;
+
 }
 
 /************************/
-/* 메인 + 탭메뉴(아이콘) */
+/* 메인 - 콘텐츠 + icon */
 /************************/
 
-/* 아이콘 공간 만들기 */
-.icon {
-    position: absolute;
-    /* 슬라이드 구분 포지션 */
-    top: 600px;
-    /* 슬라이드 공간 확보 (포지션으로 헤더 공간 필요X) */
-    left: 100px;
-    /* 표를 왼쪽에서 띄움 */
-    width: 1200px;
-    /* 너비 */
-    height: 2500px;
-    /* 높이 */
+/* 콘텐츠 공간 만들기 */
+.contents {
+    margin-top: 100px;
+}
+
+/* 콘텐츠 테이블 공통 */
+.icon table {
+    width: 46%;
+    border-radius: 30px;
     overflow: hidden;
-    /* 공간 넘기면 숨김 */
-    font-size: 16px;
-    /* 글자 크기 */
-    line-height: 30px;
-    /* 줄간격 */
-}
-
-/* 표 테두리 */
-.icon td {
-    width: 500px;
-    /* 너비 */
-    height: 500px;
-    /* 높이 */
-    border-top-right-radius: 50px;
-    /* 위 오른쪽 곡선 그리기 */
-    border-bottom-left-radius: 50px;
-    /* 아래 왼쪽 곡선 그리기 */
-    border-style: solid;
-    /* 테두리 실선 */
-    border-color: rgba(0, 0, 0, 0.1);
-    /* 테두리 투명 */
-    overflow: hidden;
-    /* 넘기면 숨김 */
-}
-
-/* 표 이미지 스타일 */
-.icon img {
-    width: 100%;
-    /* 너비 */
-    height: 100%;
-    /* 높이 */
-}
-
-/* 표 글자 스타일 */
-.icon div {
-    margin-left: 20px;
-    /* 왼쪽 여백 */
-    color: black;
-    /* 글자색 */
-    font-size: 16px;
-    /* 글자 크기 */
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    /* 글자 스타일 */
-    letter-spacing: 1px;
-    /* 글자 사이 간격 */
 }
 
 /************************/
-/* 메인 + 탭메뉴(리스트) */
+/* 메인 - 콘텐츠 + icon */
 /************************/
 
-/* 리스트 공간 만들기 */
-.list {
-    position: absolute;
-    /* 슬라이드 구분 포지션 */
-    top: 600px;
-    /* 슬라이드 공간 확보 (포지션으로 헤더 공간 필요X) */
-    left: 50px;
-    /* 표를 왼쪽에서 띄움 */
-    width: 1100px;
-    /* 너비 */
-    height: 2500px;
-    /* 높이 */
-}
-
-/* 리스트 스타일 */
-.list li {
-    border: 1px solid;
-    /* 테두리 */
-    margin: 20px;
-    /* 리스트간 간격 생성 */
-    overflow: hidden;
-    /* 공간 넘기면 숨김 */
-    border-top-left-radius: 50px;
-    /* 위 왼쪽 테두리곡선 */
-    border-bottom-left-radius: 50px;
-    /* 아래 왼쪽 테두리곡선 */
-}
-
-/* 링크 스타일 */
-.list a {
-    width: 1100px;
-    /* 가로 길이 */
-    display: block;
-    /* 링크를 블록범위로 넓히기 + 식당정보 왼쪽부터 순서대로 놓기*/
-}
-
-/* 이미지 스타일 */
-.list img {
-    padding-right: 0;
-    /* 글자와 여백 */
-    width: 150px;
-    /* 너비 */
-    height: 100px;
-    /* 높이 */
+/* 테이블 홀수 공간 만들기 */
+.icon table:nth-child(odd) {
     float: left;
-    /* 왼쪽 배치 */
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
-/* 식당 정보 */
-.list div {
-    font-size: 20px;
-    /* 글자 크기 */
-    padding: 36.5px 108px;
-    /* 좌우 여백 */
-    color: black;
-    /* 글자 색상 */
-    float: left;
-    /* 왼쪽으로 배치 */
-}
-
-/********************/
-/* 사이드바 - 이미지 */
-/********************/
-
-/* 사이드바 공간 만들기 */
-aside {
-    padding-top: 100px;
-    /* 헤더 공간 확보 */
-    width: 240px;
-    /* 너비 */
-    height: 2000px;
-    /* 높이 */
-    overflow: hidden;
-    /* 공간을 넘으면 숨김 */
+/* 테이블 짝수 공간 만들기 */
+.icon table:nth-child(even) {
     float: right;
-    /* 오른쪽 배치 (왼쪽 메인) */
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
-/* 사이드바 이미지 크기 */
-aside img {
-    width: 240px;
-    /* 너비 */
-    height: 300px;
-    /* 높이 */
+.icon table img {
+    width: 100%;
+    aspect-ratio: 1/1;
+}
+
+.icon table a {
+    font-size: 20px;
+    color: black;
+    text-decoration: none;
+}
+
+/************************/
+/* 메인 - 콘텐츠 + list */
+/************************/
+
+/* 목록 공간 만들기 */
+.list ul {
+    width: 100%;
+    border-color: #aaa;
+}
+
+.list ul li {
+    height: 100px;
+    overflow: hidden;
+    margin: 10px;
+    border-color: #aaa;
+    border-style: solid;
+    border-width: thin;
+    border-radius: 10px;
+}
+
+/* 이미지 공간 만들기 */
+.list ul li div {
+    height: 100%;
+    width: 40%;
+    overflow: hidden;
+    float: left;
+}
+
+/* 목록 스타일 */
+.list ul li img {
+    height: 100%;
+    aspect-ratio: 4/3;
+}
+
+.list ul li a {
+    font-size: 20px;
+    color: black;
+    text-decoration: none;
+}
+
+.list ul li p {
+    padding: 6px;
+}
+
+/*************************/
+/* 메인 - 콘텐츠 + PASING */
+/*************************/
+
+/* 페이징 공간 만들기 */
+#pasing {
+    clear: both;
+    text-align: center;
+    padding-top: 50px;
+    margin-bottom: 50px;
+}
+
+#pasing a {
+    background-color: #FE750E;
+    color: white;
+    padding: 5px 10px;
+    font-size: 16px;
 }
 
 /*************************/
@@ -491,71 +377,47 @@ aside img {
 /*************************/
 
 /* 푸터 공간 만들기 */
-footer {
-    clear: both;
-    /* 플로팅 해제 */
-    top: 120px;
-    /* 헤더 + 메인 만큼 위치 */
-    width: 100%;
-    /* 너비 */
-    height: 100px;
-    /* 높이 */
-    border-top: 2px solid black;
-    /* 위에 검은 줄 */
-    background-color: white;
-    /* 배경색 */
-    display: block;
-    /* 블록요소로 배치 */
-    position: relative;
-    /* 메인과 같은 포지션 잡음 */
+#footer {
+    border-top-style: solid;
+    border-top-width: thin;
+    border-top-color: #FE750E;
+    padding: 10px;
+    margin-bottom: 30px;
 }
 
-/***************/
-/* 푸터 + 소개 */
-/***************/
+/********************/
+/* 푸터 + 소개, 주소 */
+/********************/
 
 /* 소개 공간 만들기 */
 #bottomMenu {
-    width: 1300px;
-    /* 너비 */
-    height: 30px;
-    /* 높이 */
     float: left;
-    /* 왼쪽에 배치 */
-    font-size: 0;
-    /* 글자 크기 초기화 */
-    padding-top: 15px;
-    /* 위에 띄우기 */
 }
 
 /* 소개 목록 스타일 */
 #bottomMenu li {
     display: inline-block;
-    /* 메뉴 가로 정렬 */
-    width: 120px;
-    /* 메뉴 가로길이 */
-    font-size: 16px;
-    /* 글자 크기 */
-    text-align: center;
-    /* 글자 가운데 정렬 */
-    border-right: 2px solid #aaa;
-    /* 오른쪽 회색 줄 */
-    padding: 0 10px;
-    /* 여백 */
+    border-right-style: solid;
+    border-right-width: initial;
+    border-right-color: #aaa;
+    padding: 0 5px;
 }
 
-/* 소개 링크 스타일 */
+#bottomMenu li:nth-last-child(1) {
+    border: none;
+}
+
+/* 소개 글자 스타일 */
 #bottomMenu a {
-    display: block;
-    /* 링크 텍스트는 블록까지 범위 넓힘 */
-    color: black;
-    /* 글자 색 */
+    text-decoration: none;
+    font-size: 14px;
+    color: #aaa;
 }
 
-/* 소개에 마우스 올릴 때 효과 */
-#bottomMenu a:hover {
-    text-decoration: underline;
-    /* 글자에 밑줄 */
+/* 주소 공간 만들기 */
+#company {
+    font-size: 14px;
+    color: #aaa;
 }
 
 /**************/
@@ -564,34 +426,11 @@ footer {
 
 /* sns 공간 만들기 */
 #sns {
-    width: 100%;
-    /* 너비 */
-    height: 20px;
-    /* 높이 */
-    padding-top: 15px;
-    /* 위에 띄우기 */
+    float: right;
 }
 
 /* sns 목록 스타일 */
 #sns li {
     display: inline-block;
-    /* 메뉴 가로 정렬 */
     width: 30px;
-    /* 메뉴 가로길이 */
-}
-
-/***************/
-/* 푸터 + 주소 */
-/***************/
-
-/* 회사 주소 공간 만들기 */
-#company {
-    clear: both;
-    /* 플로팅 해제 */
-    font-size: 14px;
-    /* 글자 크기 */
-    color: #aaa;
-    /* 글자 색*/
-    padding-top: 30px;
-    /* 위에 띄우기 */
 }

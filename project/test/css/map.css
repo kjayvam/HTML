@@ -248,13 +248,12 @@ input[id="num10"]:checked ~ aside > .con10 {
 input[type="search"] {
     width: 200px;
     height: 50px;
-    font-size: 20px;
+    font-size: 25px;
     margin-bottom: 10px;
     border-style: solid;
     border-width: 3px;
-    border-color: #FE750E;
+    border-color: blue;
     border-radius: 10px;
-    padding-left: 5px ;
 }
 
 /* 검색버튼 스타일 */
@@ -266,14 +265,13 @@ input[type="submit"] {
     border-radius: 10px;
     font-size: 25px;
     border-style: solid;
-    border-width: thin;
+    border-width: 1px;
     border-color: black;
-    color: white;
-    background-color: #FE750E;
 }
 
 /* 스크롤 만들기 */
 #container {
+    
     height: 100%;
     overflow: scroll;
     clear: both;
@@ -305,31 +303,12 @@ td {
 }
 
 /**************/
-/* 탭1 - 전체 */
-/**************/
-
-/* 검색창 공간 만들기 */
-#search {
-    padding: 20px 20px 30px;
-    border-bottom: 1px solid;
-}
-
-/* 검색버튼 스타일 */
-.con1 input[type="submit"] {
-    width: 100px;
-    height: 50px;
-}
-
-.con1 form[id="container"] {
-    top: 165px;
-}
-
-/**************/
 /* 탭2 - 한식 */
 /**************/
 
 /* 검색창 공간 만들기 */
 #search {
+    background-color: yellow;
     padding: 20px 20px 30px;
     border-bottom: 1px solid;
 }
@@ -344,162 +323,6 @@ td {
     top: 165px;
 }
 
-/**************/
-/* 탭3 - 중식 */
-/**************/
 
-/* 검색창 공간 만들기 */
-#search {
-    padding: 20px 20px 30px;
-    border-bottom: 1px solid;
-}
 
-/* 검색버튼 스타일 */
-.con3 input[type="submit"] {
-    width: 100px;
-    height: 90px;
-}
 
-.con3 form[id="container"] {
-    top: 165px;
-}
-
-/**************/
-/* 탭4 - 일식 */
-/**************/
-
-/* 검색창 공간 만들기 */
-#search {
-    padding: 20px 20px 30px;
-    border-bottom: 1px solid;
-}
-
-/* 검색버튼 스타일 */
-.con4 input[type="submit"] {
-    width: 100px;
-    height: 90px;
-}
-
-.con4 form[id="container"] {
-    top: 165px;
-}
-
-/**************/
-/* 탭5 - 양식 */
-/**************/
-
-/* 검색창 공간 만들기 */
-#search {
-    padding: 20px 20px 30px;
-    border-bottom: 1px solid;
-}
-
-/* 검색버튼 스타일 */
-.con5 input[type="submit"] {
-    width: 100px;
-    height: 105px;
-}
-
-.con5 form[id="container"] {
-    top: 165px;
-}
-
-/******************/
-/* 탭6 - 동남아식 */
-/******************/
-
-/* 검색창 공간 만들기 */
-#search {
-    padding: 20px 20px 30px;
-    border-bottom: 1px solid;
-}
-
-/* 검색버튼 스타일 */
-.con6 input[type="submit"] {
-    width: 100px;
-    height: 90px;
-}
-
-.con6 form[id="container"] {
-    top: 165px;
-}
-
-/**************/
-/* 탭7 - 후식 */
-/**************/
-
-/* 검색창 공간 만들기 */
-#search {
-    padding: 20px 20px 30px;
-    border-bottom: 1px solid;
-}
-
-/* 검색버튼 스타일 */
-.con7 input[type="submit"] {
-    width: 100px;
-    height: 90px;
-}
-
-.con7 form[id="container"] {
-    top: 165px;
-}
-
-/**************/
-/* 탭8 - 뷰티 */
-/**************/
-
-/* 검색창 공간 만들기 */
-#search {
-    padding: 20px 20px 30px;
-    border-bottom: 1px solid;
-}
-
-/* 검색버튼 스타일 */
-.con8 input[type="submit"] {
-    width: 100px;
-    height: 105px;
-}
-
-.con8 form[id="container"] {
-    top: 165px;
-}
-
-/**************/
-/* 탭9 - 숙박 */
-/**************/
-
-/* 검색창 공간 만들기 */
-#search {
-    padding: 20px 20px 30px;
-    border-bottom: 1px solid;
-}
-
-/* 검색버튼 스타일 */
-.con9 input[type="submit"] {
-    width: 100px;
-    height: 90px;
-}
-
-.con9 form[id="container"] {
-    top: 165px;
-}
-
-/***************/
-/* 탭10 - 기타 */
-/***************/
-
-/* 검색창 공간 만들기 */
-#search {
-    padding: 20px 20px 30px;
-    border-bottom: 1px solid;
-}
-
-/* 검색버튼 스타일 */
-.con10 input[type="submit"] {
-    width: 100px;
-    height: 120px;
-}
-
-.con10 form[id="container"] {
-    top: 165px;
-}
