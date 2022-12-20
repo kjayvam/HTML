@@ -98,13 +98,14 @@
 }
 
 /* 테이블 중앙 정렬 */
-#sign table {
+#sign form {
     margin-left: auto;
     margin-right: auto;
+    text-align: center;
 }
 
 /* 글자 스타일 */
-#sign a {
+#sign input[type="button"] {
     text-decoration: none;
     padding: 20px;
     color: #222;

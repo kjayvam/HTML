@@ -8,8 +8,27 @@
 </head>
 
 <body>
-    <form action="">
-        <input type="button" value="회원가입" onclick="infoConfirm()">
+    <form name="frm" method="post" action="UserServlet" onSubmit="return Checkform()">
+
+        성명 : <input type="text" name="name">
+        
+        
+        우편물 수령 장소 :
+        
+        <label for="post1">
+            <input type="radio" id="post1" name="post" value="1"> 집
+        </label>
+        
+        <label for="post2">
+            <input type="radio" id="post2" name="post" value="2"> 회사
+        </label>
+        
+        
+        <label for="confirm1">
+            상기 개인정보 수집에 동의 
+            <input type="checkbox" value="1" id="confirm" name="confirm">
+        </label>
+    
     </form>
 
 </body>
